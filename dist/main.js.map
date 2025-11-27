@@ -1,0 +1,1 @@
+{"version":3,"file":"main.js","mappings":"mBACIA,QAAQC,IAAI,Q","sources":["webpack://klychreal.ru/./src/components/modal.mjs"],"sourcesContent":["const modal = () => {\n    console.log('modal');\n}\n\nexport default modal"],"names":["console","log"],"ignoreList":[],"sourceRoot":""}

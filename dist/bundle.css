@@ -1,4 +1,279 @@
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./css/style.scss ***!
+  \*******************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
-html{font-size:10px}body{font-family:"Inter",sans-serif}h1{font-size:4.8rem;font-weight:bold}img{width:100%}ul,li{list-style:none}.df{display:flex}.fdc{flex-direction:column}.aic{align-items:center}.jcc{justify-content:center}.w100{width:100%}.gap5{gap:.5rem}.gap10{gap:1rem}.gap15{gap:1.5rem}.gap20{gap:2rem}.gap30{gap:3rem}.gap40{gap:4rem}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./css/style.scss (1) ***!
+  \***********************************************************************************************************************************************************************************/
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 4.8rem;
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: flex;
+}
+
+.container {
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.df {
+  display: flex;
+}
+
+.fdc {
+  flex-direction: column;
+}
+
+.fdr {
+  flex-direction: row;
+}
+
+.aic {
+  align-items: center;
+}
+
+.ais {
+  align-items: stretch;
+}
+
+.aifs {
+  align-items: flex-start;
+}
+
+.aife {
+  align-items: flex-end;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.gap5 {
+  gap: 0.5rem;
+}
+
+.gap10 {
+  gap: 1rem;
+}
+
+.gap15 {
+  gap: 1.5rem;
+}
+
+.gap20 {
+  gap: 2rem;
+}
+
+.gap30 {
+  gap: 3rem;
+}
+
+.gap40 {
+  gap: 4rem;
+}
+
+.gap50 {
+  gap: 5rem;
+}
+
+.header .top {
+  padding-top: 3rem;
+  color: #30738D;
+}
+.header .top .logo {
+  max-width: 35rem;
+}
+.header .top .link {
+  transition: 0.3s ease;
+}
+.header .top .link.adress p {
+  font-size: 1.2rem;
+  max-width: 10rem;
+}
+.header .top .link.phone {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.header .top .link .icon {
+  position: relative;
+  background: linear-gradient(180deg, #30738D 0%, #2B4955 100%);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .top .link .icon svg {
+  fill: #ffffff;
+  position: relative;
+  z-index: 3;
+}
+.header .top .link .icon::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(48, 115, 141, 0.3607843137);
+  border-radius: 50%;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+.header .top .link:hover .icon {
+  transform: scale(1.05);
+}
+.header .top .link:hover .icon::before {
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  50% {
+    width: 120%;
+    height: 120%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+.header .menu {
+  padding-bottom: 3rem;
+}
+.header .menu .link {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  transition: 0.3s ease;
+  color: #30738D;
+  background: transparent;
+  border: 1px solid #30738D;
+}
+.header .menu .link:hover {
+  background: #30738D;
+  color: #ffffff;
+  transform: scale(1.02);
+}
+.header .menu .link.current {
+  background: #2B4955;
+  color: #ffffff;
+}
+
+.hero .filters {
+  padding: 1.5rem 0;
+  background: linear-gradient(180deg, #30738D 0%, #2B4955 100%);
+  color: #ffffff;
+}
+.hero .filters .item {
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  background: linear-gradient(180deg, #30738D 0%, #2B4955 100%);
+  border: 1px solid #30738D;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1.2rem;
+}
+.hero .filters .item svg {
+  transition: 0.3s ease;
+}
+.hero .filters .item:hover {
+  border-color: #8BC2D7;
+}
+.hero .filters .item:hover svg {
+  transform: rotate(180deg);
+}
+.hero .filters .controls .btn {
+  padding: 1.2rem 2rem;
+  border-radius: 2rem;
+  background: linear-gradient(180deg, #30738D 0%, #2B4955 100%);
+  border: 1px solid #30738D;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1.5rem;
+  position: relative;
+}
+.hero .filters .controls .btn input[type=submit] {
+  position: absolute;
+  opacity: 0;
+  left: -9999px;
+}
+.hero .filters .controls .btn:hover {
+  transform: scale(1.05);
+  border-color: #8BC2D7;
+}
+.hero .info {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: url(6164da7cc2c053560d6f.png) no-repeat center bottom/cover;
+  color: #ffffff;
+}
+.hero .info .block {
+  padding: 3rem;
+  max-width: 67rem;
+  background: rgba(48, 115, 141, 0.3607843137);
+  border-radius: 2rem;
+  border: 1px solid rgba(48, 115, 141, 0.1411764706);
+  backdrop-filter: blur(3px);
+}
+.hero .info .block .subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 120%;
+}
+.hero .info .block .btn {
+  padding: 1.5rem 3rem;
+  border-radius: 2rem;
+  background: linear-gradient(180deg, #30738D 0%, #2B4955 100%);
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 2rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+.hero .info .block .btn:hover {
+  transform: scale(1.05);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /*# sourceMappingURL=bundle.css.map*/

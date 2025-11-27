@@ -1,0 +1,92 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
+.hero {
+    & .filters {
+        padding: 1.5rem 0;
+        background: v.$gradient;
+        color: v.$white;
+
+        & .item {
+            padding: 0.5rem 2rem;
+            border-radius: map-get(v.$space, 20);
+            background: v.$gradient;
+            border: 1px solid v.$blue;
+            cursor: pointer;
+            transition: .3s ease;
+            font-size: 1.2rem;
+
+            & svg {
+                transition: .3s ease;
+            }
+
+            &:hover {
+                border-color: v.$lightBlue;
+
+                & svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        & .controls {
+            & .btn {
+                padding: 1.2rem 2rem;
+                border-radius: map-get(v.$space, 20);
+                background: v.$gradient;
+                border: 1px solid v.$blue;
+                cursor: pointer;
+                transition: .3s ease;
+                font-size: 1.5rem;
+                position: relative;
+
+                & input[type='submit'] {
+                    position: absolute;
+                    opacity: 0;
+                    left: -9999px;
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+                    border-color: v.$lightBlue;
+                }
+            }
+        }
+    }
+
+    & .info {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        background: url(../dist/img/hero.png) no-repeat center bottom /cover;
+        color: v.$white;
+
+        & .block {
+            padding: 3rem;
+            max-width: 67rem;
+            background: v.$bgBlue30;
+            border-radius: map-get(v.$space, 20);
+            border: 1px solid v.$bgBlue10;
+            backdrop-filter: blur(3px);
+
+            & .subtitle {
+                font-size: 2rem;
+                font-weight: 400;
+                line-height: 120%;
+            }
+
+            & .btn {
+                padding: 1.5rem 3rem;
+                border-radius: map-get(v.$space, 20);
+                background: v.$gradient;
+                width: fit-content;
+                font-size: 2rem;
+                font-weight: 500;
+                transition: .3s ease;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+}

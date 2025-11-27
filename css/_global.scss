@@ -14,9 +14,24 @@ h1 {
 img {
     width: 100%;
 }
-ul, li {
+
+ul,
+li {
     list-style: none;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+}
+
+.container {
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .df {
     display: flex;
 }
@@ -25,12 +40,32 @@ ul, li {
     flex-direction: column;
 }
 
+.fdr {
+    flex-direction: row;
+}
+
 .aic {
     align-items: center;
 }
 
+.ais {
+    align-items: stretch;
+}
+
+.aifs {
+    align-items: flex-start;
+}
+
+.aife {
+    align-items: flex-end;
+}
+
 .jcc {
     justify-content: center;
+}
+
+.jcsb {
+    justify-content: space-between;
 }
 
 .w100 {

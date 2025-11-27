@@ -1,0 +1,16 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin r($key) {
+  border-radius: map-get($space, $key);
+}
+
+@mixin p($key) {
+  padding: map-get($space, $key);
+}
+
+@mixin g($key) {
+  gap: map-get($space, $key);
+}

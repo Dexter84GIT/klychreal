@@ -1,6 +1,6 @@
 {
   "name": "klychreal.ru",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "index.js",
   "type": "module",
   "devDependencies": {
@@ -15,12 +15,12 @@
     "webpack-cli": "^6.0.1"
   },
   "scripts": {
-    "sass": "NODE_ENV=production webpack --config webpack.config.js --mode=production",
+    "sass": "webpack --config webpack.config.js --mode=production",
     "sass:dev": "webpack --config webpack.config.js --mode=development",
-    "sass:watch": "webpack --watch --config webpack.config.js",
+    "sass:watch": "webpack --watch --config webpack.config.js --mode=development",
     "build": "webpack --mode=production",
-    "watch": "webpack --watch --mode=development",
-    "dev": "webpack --mode=development"
+    "dev": "webpack --mode=development",
+    "watch": "webpack --watch --mode=development"
   },
   "keywords": [],
   "author": "",

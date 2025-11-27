@@ -1,0 +1,38 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-size: 4.8rem;
+    font-weight: bold;
+}
+
+img {
+    width: 100%;
+}
+ul, li {
+    list-style: none;
+}
+.df {
+    display: flex;
+}
+
+.fdc {
+    flex-direction: column;
+}
+
+.aic {
+    align-items: center;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.w100 {
+    width: 100%;
+}

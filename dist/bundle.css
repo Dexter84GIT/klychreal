@@ -1,4 +1,4 @@
 @import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{font-size:10px}body{font-family:"Inter",sans-serif}
+html{font-size:10px}body{font-family:"Inter",sans-serif}h1{font-size:4.8rem;font-weight:bold}img{width:100%}ul,li{list-style:none}.df{display:flex}.fdc{flex-direction:column}.aic{align-items:center}.jcc{justify-content:center}.w100{width:100%}.gap5{gap:.5rem}.gap10{gap:1rem}.gap15{gap:1.5rem}.gap20{gap:2rem}.gap30{gap:3rem}.gap40{gap:4rem}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
 /*# sourceMappingURL=bundle.css.map*/

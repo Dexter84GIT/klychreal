@@ -1,5 +1,6 @@
 $gradient: linear-gradient(180deg, #30738D 0%, #2B4955 100%);
 $hoverGradient: linear-gradient(0deg, #30738D 0%, #2B4955 100%);
+$black: #282828;
 $blue: #30738D;
 $darkBlue: #2B4955;
 $lightBlue: #8BC2D7;
@@ -7,6 +8,10 @@ $bgBlue30: #30738d5c;
 $bgBlue10: #30738d24;
 $bgBlue5: #30738d16;
 $white: #ffffff;
+$overlay: #0000003c;
+$overlayDark: #2828287d;
+$gray: #808080;
+$lightGray: #f9f9f9;
 
 $space: (
   10: 1rem,

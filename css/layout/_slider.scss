@@ -1,0 +1,100 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
+.slider {
+
+
+    .swiper-slide {
+        flex: 0 0 auto;
+    }
+
+    .slide {
+        max-width: 38rem;
+        width: 100%;
+        height: auto;
+        padding: 1.5rem;
+        border-radius: 2rem;
+        border: 1px solid v.$bgBlue10;
+        transition: .3s ease;
+        background: v.$white;
+        &:hover {
+            border-color: v.$blue;
+        }
+    }
+
+    .sliderArrow {
+        width: 3rem;
+        height: 3rem;
+        border-radius: v.$rround;
+        background: v.$white;
+        @include m.flex-center;
+        cursor: pointer;
+        transition: .3s ease;
+
+        svg {
+            fill: v.$blue;
+            stroke: v.$blue;
+        }
+
+        &:hover {
+            background: v.$blue;
+
+            svg {
+                fill: v.$white;
+                stroke: v.$white;
+            }
+        }
+    }
+
+    & .actions {
+        svg {
+            fill: v.$white;
+            cursor: pointer;
+            transition: .3s ease;
+
+            &:hover {
+                fill: v.$blue;
+                stroke: v.$blue;
+            }
+        }
+    }
+
+    & .info {
+        & .btn {
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding: 1rem;
+            background: v.$gradient;
+            color: v.$white;
+            border-radius: 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 2rem;
+            transition: .3s ease;
+
+            &:hover {
+                opacity: .95;
+            }
+        }
+        & .title {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        & .description {
+            font-size: 1.4rem;
+            color: v.$gray;
+        }
+    }
+}
+.seeAll {
+    margin: 0 auto;
+    font-size: 2rem;
+    border-radius: 2rem;
+    color: v.$white;
+    background: v.$gradient;
+    padding: 1.5rem 4.4rem;
+    transition: .3s ease;
+    &:hover {
+        opacity: .9;
+    }
+}

@@ -5,6 +5,13 @@
 @use 'layout/header';
 @use 'layout/footer';
 @use 'layout/hero';
+@use 'layout/slider';
+@use 'layout/featured';
+@use 'layout/partners';
+@use 'layout/blog';
+@use 'layout/callback';
+// карточка объекта
+@use 'layout/object';
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 

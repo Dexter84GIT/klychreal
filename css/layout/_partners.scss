@@ -1,0 +1,69 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
+.partners {
+    background: v.$white;
+    & .wrap {
+        max-width: 135rem;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+    & .content {
+        overflow: hidden;
+        width: 100%;
+    }
+    & .partnersSlider {
+        position: inherit;
+    }
+    & .slide {
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            & .info {
+                background: #282828b6;
+            }
+        }
+    }
+
+    & .slide.man {
+        padding: 0rem;
+
+        & img {
+            display: block;
+        }
+    }
+
+    & .info {
+        padding: 2rem;
+        position: absolute;
+        bottom: 0rem;
+        left: 0rem;
+        background: #28282880;
+        color: v.$white;
+        font-weight: 600;
+        width: 100%;
+        transition: .3s ease;
+
+        & .name {
+            font-size: 2.4rem;
+        }
+
+        & .job {
+            font-size: 1.5rem;
+        }
+
+        & .phone {
+            & .icon {
+                width: 3rem;
+                height: 3rem;
+                background: v.$gradient;
+                border-radius: v.$rround;
+                & svg {
+                    fill: v.$white;
+                }
+            }
+            font-size: 1.5rem;
+        }
+    }
+}

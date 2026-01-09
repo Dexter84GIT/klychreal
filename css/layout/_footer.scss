@@ -1,0 +1,39 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
+.footer {
+    background: v.$gradient;
+    color: v.$white;
+    padding: 3rem 0rem;
+    font-size: 1.4rem;
+
+    & .top {
+        padding-bottom: 3rem;
+        border-bottom: 1px solid v.$white;
+        & .logo {
+            max-width: 10.3rem;
+        }
+        & .column {
+            max-width: calc(50% - 3rem);
+            width: 100%;
+            &.menu {
+                & .block {
+                    max-width: calc(50% - 2rem);
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    & .bottom {
+
+        & .block {
+            max-width: calc(50% - 5rem);
+            width: 100%;
+
+            & a {
+                text-decoration: underline;
+            }
+        }
+    }
+}

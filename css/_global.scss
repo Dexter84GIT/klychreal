@@ -1,9 +1,12 @@
+@use './variables' as v;
+
 html {
     font-size: 10px;
 }
 
 body {
     font-family: 'Inter', sans-serif;
+    color: v.$black;
 }
 
 h1 {
@@ -26,6 +29,10 @@ a {
     display: flex;
 }
 
+.section {
+    padding: 3rem 0;
+}
+
 .container {
     max-width: 120rem;
     width: 100%;
@@ -42,6 +49,10 @@ a {
 
 .fdr {
     flex-direction: row;
+}
+
+.fww {
+    flex-wrap: wrap;
 }
 
 .aic {
@@ -67,7 +78,59 @@ a {
 .jcsb {
     justify-content: space-between;
 }
-
+.jcfe {
+    justify-content: flex-end;
+}
 .w100 {
     width: 100%;
+}
+
+.sectionTitle {
+    font-size: 3.6rem;
+    font-weight: 600;
+
+    & span {
+        color: v.$blue;
+    }
+}
+
+.next,
+.prev {
+    width: 4.8rem;
+    height: 4.8rem;
+    background: v.$white;
+    border: 1px solid v.$blue;
+    border-radius: v.$rround;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    pointer-events: auto;
+    & svg {
+        fill: v.$blue;
+        stroke: v.$blue;
+        transition: .3s ease;
+    }
+
+    &:hover {
+        background: v.$blue;
+
+        & svg {
+            fill: v.$white;
+            stroke: v.$white;
+        }
+    }
+}
+
+.prev {
+    left: 0rem;
+}
+
+.next {
+    right: 0rem;
 }

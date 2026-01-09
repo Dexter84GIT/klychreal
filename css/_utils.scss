@@ -5,7 +5,9 @@ $gaps: (
   20: 2rem,
   30: 3rem,
   40: 4rem,
-  50: 5rem
+  50: 5rem,
+  60: 6rem,
+  100: 10rem
 );
 
 @each $name, $value in $gaps {

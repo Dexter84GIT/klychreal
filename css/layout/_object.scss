@@ -1,0 +1,159 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
+#object {
+    position: relative;
+    background: v.$lightGray;
+
+    & .gallery {
+        max-width: calc(75% - 1.5rem);
+        width: 100%;
+        overflow: hidden;
+        max-height: 50rem;
+
+        & .main {
+            max-width: calc(75% - 1rem);
+            width: 100%;
+            overflow: hidden;
+            border-radius: map-get(v.$space, 10);
+            max-height: 50rem;
+
+            & .slide {
+                object-fit: contain;
+                background: v.$bgBlue5;
+                transition: .3s ease-in;
+
+                &:hover {
+                    background: v.$bgBlue10;
+                }
+
+                & img {
+                    object-fit: contain;
+                    height: inherit;
+                }
+            }
+        }
+
+        & .thumbs {
+            max-width: calc(25% - 1rem);
+            width: 100%;
+            position: relative;
+
+            & .swiper-wrapper {
+                padding: 2rem 0;
+            }
+
+            & .slide {
+                max-height: 15rem;
+                overflow: hidden;
+                aspect-ratio: 4 / 3;
+                background: v.$bgBlue5;
+                border-radius: map-get(v.$space, 10);
+                transition: .3s ease-in;
+
+                &:hover {
+                    background: v.$bgBlue10;
+                }
+
+                & img {
+                    height: -webkit-fill-available;
+                    object-fit: contain;
+                }
+            }
+
+            & .sliderArrow {
+                padding: 0.5rem;
+                width: 100%;
+                @include m.flex-center;
+                background: v.$blue;
+                position: absolute;
+                z-index: 20;
+                cursor: pointer;
+                transition: .3s ease-in;
+                border-radius: 4px;
+
+                &:hover {
+                    background: v.$darkBlue;
+                }
+
+                & svg {
+                    fill: v.$white;
+                }
+
+                &.prevBtn {
+                    top: 0rem;
+                    left: 0rem;
+
+                    & svg {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                &.nextBtn {
+                    bottom: 0rem;
+                    left: 0rem;
+                }
+            }
+        }
+    }
+
+    & .important {
+        max-width: calc(25% - 1.5rem);
+        width: 100%;
+        background: v.$white;
+        border-radius: map-get(v.$space, 10);
+        box-shadow: -2px 4px 10px #62ade758;
+        padding: 2rem;
+
+        & .price {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: v.$blue;
+
+            & span {
+                padding-left: 0.5rem;
+                font-weight: normal;
+            }
+        }
+
+        & .for {
+            font-size: 1.6rem;
+            color: v.$gray;
+        }
+
+        & .img {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        & svg {
+            fill: v.$blue;
+        }
+
+        & .row {
+            font-size: 1.6rem;
+        }
+
+        & .callback {
+            margin-top: 2rem;
+
+            & .img {
+                width: 4rem;
+                height: 4rem;
+                @include m.flex-center;
+                border-radius: 50%;
+                background: v.$gradient;
+
+                & svg {
+                    fill: v.$white;
+                }
+            }
+
+            & span {
+                font-size: 2.6rem;
+                font-weight: 500;
+                color: v.$blue;
+            }
+        }
+    }
+}

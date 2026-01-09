@@ -1,0 +1,25 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
+.callback {
+    & .block {
+        max-width: calc(50% - 3rem);
+        width: 100%;
+    }
+    & .links {
+        & .link {
+            font-size: 2.4rem;
+            font-weight: 500;
+            & .icon {
+                width: 4rem;
+                height: 4rem;
+                border-radius: v.$rround;
+                @include m.flex-center;
+                background: v.$gradient;
+                & svg {
+                    fill: v.$white;
+                }
+            }
+        }
+    }
+}

@@ -2,6 +2,54 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/components/featured.mjs":
+/*!*************************************!*\
+  !*** ./src/components/featured.mjs ***!
+  \*************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   featured: () => (/* binding */ featured)
+/* harmony export */ });
+const featured = () => {
+  const cards = document.querySelectorAll('.featuredSlide')
+
+  if (!cards.length) return
+
+  cards.forEach((card) => {
+    const sliderEl = card.querySelector('.img')
+    const wrapper = sliderEl?.querySelector('.swiper-wrapper')
+    const slides = wrapper?.querySelectorAll('.swiper-slide') || []
+    const prev = card.querySelector('.prevBtn')
+    const next = card.querySelector('.nextBtn')
+    const currentEl = card.querySelector('.count .current')
+    const totalEl = card.querySelector('.count .all')
+
+    if (!sliderEl || !wrapper || !slides.length) return
+
+    sliderEl.classList.add('swiper')
+
+    const swiper = new Swiper(sliderEl, {
+      loop: true,
+      slidesPerView: 1,
+      navigation: { prevEl: prev, nextEl: next },
+      on: {
+        init(sw) {
+          if (totalEl) totalEl.textContent = slides.length
+          if (currentEl) currentEl.textContent = sw.realIndex + 1
+        },
+        slideChange(sw) {
+          if (currentEl) currentEl.textContent = sw.realIndex + 1
+        },
+      },
+    })
+  })
+}
+
+
+/***/ }),
+
 /***/ "./src/components/modal.mjs":
 /*!**********************************!*\
   !*** ./src/components/modal.mjs ***!
@@ -17,6 +65,73 @@ const modal = () => {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);
+
+/***/ }),
+
+/***/ "./src/components/objectSliders.mjs":
+/*!******************************************!*\
+  !*** ./src/components/objectSliders.mjs ***!
+  \******************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const objectSliders = () => {
+    const objectThumbs = document.getElementById('objectThumbs')
+
+    if (objectThumbs) {
+        new Swiper(objectThumbs, {
+            loop: true,
+            direction: "vertical",
+            spaceBetween: 10,
+            slidesPerView: 3,
+            navigation: {
+                nextEl: '.thumbs .nextBtn',
+                prevEl: '.thumbs .prevBtn',
+            },
+        })
+    }
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (objectSliders);
+
+/***/ }),
+
+/***/ "./src/components/swiper.mjs":
+/*!***********************************!*\
+  !*** ./src/components/swiper.mjs ***!
+  \***********************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const sliders = () => {
+  const partnersSlider = document.querySelector('.partnersSlider')
+
+  if (!partnersSlider) return
+
+  new Swiper(partnersSlider, {
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 3,
+    navigation: {
+      nextEl: '.partnersSlider .next',
+      prevEl: '.partnersSlider .prev',
+    },
+  })
+
+  const objectMain = document.getElementById('objectMain')
+
+  if (!objectMain) return
+
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sliders);
+
 
 /***/ })
 
@@ -84,9 +199,18 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_modal_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/modal.mjs */ "./src/components/modal.mjs");
+/* harmony import */ var _components_swiper_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/swiper.mjs */ "./src/components/swiper.mjs");
+/* harmony import */ var _components_featured_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/featured.mjs */ "./src/components/featured.mjs");
+/* harmony import */ var _components_objectSliders_mjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/objectSliders.mjs */ "./src/components/objectSliders.mjs");
+
+
+
 
 
 (0,_components_modal_mjs__WEBPACK_IMPORTED_MODULE_0__["default"])()
+;(0,_components_swiper_mjs__WEBPACK_IMPORTED_MODULE_1__["default"])()
+;(0,_components_featured_mjs__WEBPACK_IMPORTED_MODULE_2__.featured)()
+;(0,_components_objectSliders_mjs__WEBPACK_IMPORTED_MODULE_3__["default"])()
 })();
 
 /******/ })()
